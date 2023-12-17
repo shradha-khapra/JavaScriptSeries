@@ -61,3 +61,9 @@ choices.forEach((choice) => {
     playGame(userChoice);
   });
 });
+
+const resetGame = () => {
+    document.location.reload();
+}
+
+resetBtn.addEventListener("click",resetGame);
