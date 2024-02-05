@@ -41,7 +41,11 @@ boxes.forEach((box) => {
 
     let isWinner = checkWinner();
 
-    if (count === 9 && !isWinner) {
+    if (isWinner) {
+      disableBoxes();
+      showWinner(turn0 ? "X" : "O");
+    }
+    else if (count === 9) {
       gameDraw();
     }
   });
