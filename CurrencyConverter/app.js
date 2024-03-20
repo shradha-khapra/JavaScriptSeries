@@ -54,19 +54,19 @@ const updateExchangeRate = async () => {
     amtVal = 1;
     amount.value = "1";
   }
-   console.log(amount.value);
+  //  console.log(amount.value);
   const URL = `${BASE_URL}/${fromCurr.value.toLowerCase()}.json`;
   let response = await fetch(URL);
   let data = await response.json();
-   console.log(data)
+  //  console.log(data)
   
   let rate = data[fromCurr.value.toLowerCase()][toCurr.value.toLowerCase()];
   
-   console.log(data);
+  //  console.log(data);
   let finalAmount = amtVal * rate;
-   console.log(finalAmount);
+  //  console.log(finalAmount);
   msg.innerText = `${amtVal} ${fromCurr.value} = ${finalAmount} ${toCurr.value}`;
-   console.log(msg);
+  //  console.log(msg);
 };
 
 const updateFlag = (element) => {
